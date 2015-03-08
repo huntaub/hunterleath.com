@@ -1,0 +1,171 @@
+{{set . "title" "About Me"}}
+{{template "header.html" .}}
+
+<div class="container">
+  <h1><a href="/">Hunter Leath</a> <small>About Me</small></h1>
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <p>
+        Hey, I study Computer Science and Economics at the University
+        of Virginia. Sometimes, I'll make a cool project. After a
+        significant period of waiting, those projects will end up
+        here. Minor projects and most source code can be found
+        on <a href="https://github.com/huntaub">my GitHub</a>.
+      </p>
+      <p>
+        If you want to get really crazy, I also have
+        a <a href="https://www.dropbox.com/s/vg0n7iojnnsiipa/Resume_S2015.pdf?dl=0">Resume</a>.
+      </p>
+    </div>
+  </div>
+
+  <h3>Active Projects</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="project melange">
+        <h5>Melange</h5>
+        <p>
+          A social platform that gives developers the tools to build
+          decentralized, secure networks with ease. Built upon
+          the <a href="http://airdispat.ch">AirDispatch Protocol</a>,
+          it brings a unified web to users in an attractive and simple
+          package.
+        </p>
+        <p><a href="http://getmelange.com">Visit &raquo;</a></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="project list">
+        <h5>Leath's List</h5>
+        <p>
+          A website that helps students schedule their UVa courses by
+          presenting a ranked list of possible times for required
+          courses. Currently used by nearly a fourth of the student
+          body.
+        </p>
+        <p><a href="http://list.hunterleath.com">Visit &raquo;</a></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="project sh">
+        <h5>StoriesHouse</h5>
+        <p>
+          A publishing platform for blogs and podcasts utilized by an
+          elite group of authors to provide excellent commentary on
+          the world around them.
+          <span class="hidden-xs hidden-sm"><br/><br/></span>
+        </p>
+        <p><a href="http://storieshouse.com">Visit &raquo;</a></p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Hackathons</h3>
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <p>
+        Here is a listing of the couple of Hackathons that I have
+        participated in the past two years and associated projects.
+      </p>
+
+      <hr/> <!-- ---- !-->
+
+      <h5>HackUVA - February 28 - March 1, 2015</h5>
+      <p>
+        Bullder- (pronounced bull-der-dash) is a localized
+        file-sharing service in the spirit of Yik Yak. This web
+        application gives users the ability to anonymously post
+        photos, files, comments, and votes within a certain radius of
+        their location. It utilizes WebRTC to enable this services
+        without the use of servers by creating a peer-to-peer
+        localized sharing network.
+      </p>
+      <p>
+        <a href="https://github.com/jbarrow/Bullder-">Code</a>
+        &middot;
+        Built in Javascript
+      </p>
+
+      <hr/> <!-- ---- !-->
+
+      <h5>HackNC - March 1-2, 2014</h5>
+      <p>
+        Boulder is an exercise web application
+        and <a href="http://getpebble.com">Pebble</a> application that
+        enables automatic tracking of specific activity repetitions
+        by performing categorization on the watch's accelerometer data.
+      </p>
+      <p>
+        <a href="https://github.com/msilvprog7/Boulder-web">Code</a>
+        &middot;
+        Built in Python (Django) and Javascript
+      </p>
+      <p>
+        <i class="fa fa-trophy"></i>
+        Won 2nd Prize Overall and Best Pebble Application
+      </p>
+
+      <hr/> <!-- ---- !-->
+
+      <h5>HackDuke - November 16-17, 2013</h5>
+      <p>
+        CrowdCrunch is a crowd sourced task manager that works on the
+        web and through SMS. Users can pay other users to complete
+        tasks (and purchases) quickly and simply.
+      </p>
+      <p>
+        <a href="https://github.com/jbarrow/CrowdCrunch">Code</a>
+        &middot;
+        Built in Python (Django)
+      </p>
+      <p>
+        <i class="fa fa-trophy"></i>
+        Won Best Payment Application
+      </p>
+    </div>
+  </div>
+
+  <h3>Past Projects</h3>
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <p>
+        These are projects that have gone dormant over the years while
+        remaining interesting.
+      </p>
+      
+      <hr/>
+      
+      <h5>
+        <a href="http://uva2016.com">UVa 2016 Class Website</a>
+        (Fall 2013 - Present)
+      </h5>
+      <p>
+        I currently manage the Class of 2016 website for the
+        University of Virginia. Built on Django, the site is intended
+        to inform the class of upcoming council events, include
+        engaging content, and handle a large number of event registrations.
+      </p>
+
+      <hr/>
+
+      <h5>1819 (Fall 2012)</h5>
+      <p>
+        1819 was a file-sharing service that existed in the
+        browser. Built on Node.js and Websockets, the server would
+        only aid in the transferring of files while the actual data
+        was stored on the sharer's computer.
+      </p>
+
+      <hr/>
+
+      <h5>#hungryas (Fall 2012)</h5>
+      <p>
+        #hungryas was a website utilized by half of University of
+        Virginia first years that displayed information about
+        currently open dining halls around grounds.
+      </p>
+    </div>
+  </div>
+</div>
+
+{{template "footer.html" .}}
