@@ -1,0 +1,18 @@
+{{ set . "title" "Hunter Leath: Blog Archive" }}
+{{ template "header.html" . }}
+
+<div class="container">
+  <h1><a href="/">Hunter Leath</a> <small>Blog Archive</small></h1>
+
+  {{ range .posts }}
+  <div class="post">
+    <h3><a href="/blog/view/{{ .Slug }}">{{ .Title }}</a></h3>
+    <p><small>on {{ format .Published "Monday, January 2 at 3:04 PM" }}</small></p>
+  </div>
+  {{ end }}
+
+  <br/>
+  <p>This blog is powered by <a href="http://getmelange.com">Melange</a>.</p>
+</div>
+
+{{ template "footer.html" . }}

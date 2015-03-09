@@ -1,4 +1,4 @@
-{{set . "title" "Home"}}
+{{set . "title" "Hunter Leath"}}
 {{template "header.html" .}}
 
 <div class="container">
@@ -28,6 +28,24 @@
       </p>
     </div>
   </div>
+
+  {{ if .posts }}
+  <!-- Begin Blog !-->
+  <hr/>
+  <h2>Recent Blog Posts</h2>
+  
+  {{ range .posts }}
+  <div class="post">
+    <h3><a href="/blog/view/{{ .Slug }}">{{ .Title }}</a></h3>
+    <p class="text-muted"><small>on {{ format .Published "Monday, January 2 at 3:04 PM" }}</small></p>
+    {{ .Body }}
+  </div>
+  {{ end }}
+
+  <p><a href="/blog/list">Archive &raquo;</a></p>  
+  {{ end }}
+
+  <br/>
 </div>
 
 {{template "footer.html" .}}
