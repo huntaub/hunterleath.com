@@ -11,6 +11,9 @@ GET     /about                                  App.About
 GET     /blog/list                              Blog.List
 GET     /blog/view/:slug                        Blog.View
 
+# Map Raw Presentation Requests
+GET    /presentations/raw/*filepath             Static.Serve("presentations/raw")
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

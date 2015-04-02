@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/epoch/0.6.0/epoch.min.css">
+</head>
+<body>
+  <style>
+    .graph-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  </style>
+  <div class="graph-container" style="z-index:10">
+    <div id="line" class="epoch category10" style="height: 200px;"></div>
+  </div>
+  <div class="graph-container">
+    <div id="bar" class="epoch category10" style="height: 200px;"></div>
+  </div>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/epoch/0.6.0/epoch.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    var volumeData = [{label: 'Volume', values: []}];
+    var volumeChart = $('#bar').epoch({
+      type: 'time.bar',
+      data: volumeData,
+      axes: [],
+    });
+    
+    var priceData = [{label: 'Price', values: []}];
+    var priceChart = $('#line').epoch({
+      type: 'time.line',
+      data: priceData,
+      axes: [],
+    });
+
+    setInterval(function() {
+      volumeChart.push([{time: new Date().getTime(), y: Math.random() * 100}]);
+      priceChart.push([{time: new Date().getTime(), y: Math.random() * 100}]);
+    }, 500);
+    });
+  </script>
+</body>
