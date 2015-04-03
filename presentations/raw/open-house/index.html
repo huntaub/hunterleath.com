@@ -124,15 +124,9 @@
                             <h2>Market Price</h2>
                             <h1 style="color: green;">$<span id="price">100.00</span></h1>
                             <script>
-                              setInterval(function() {
-                                var random = Math.round((80 + (Math.random() * 40)) * 100) / 100;
-                                if((random * 100) % 10 == 0) {
-                                  random = random + "0";
-                                } else {
-                                  random = random + "";
-                                }
-                                document.getElementById("price").innerHTML = random;
-                              }, 1000);
+                              window.addEventListener("message", function(event) {
+                                document.getElementById("price").innerHTML = "$" + event.data.price;
+                              }, false);
                             </script>
                           </section>
 
