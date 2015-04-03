@@ -125,7 +125,7 @@
                             <h1 style="color: green;">$<span id="price">100.00</span></h1>
                             <script>
                               window.addEventListener("message", function(event) {
-                                document.getElementById("price").innerHTML = "$" + event.data.price;
+                                document.getElementById("price").innerHTML = event.data.price;
                               }, false);
                             </script>
                           </section>
